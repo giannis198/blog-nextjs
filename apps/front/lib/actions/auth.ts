@@ -6,10 +6,11 @@ import { CREATE_USER_MUTATION, SIGN_IN_MUTATION } from "../gqlQueries";
 import { redirect } from "next/navigation";
 
 import { revalidatePath } from "next/cache";
-import { createSession } from "../session";
+
 import { SignUpFormState } from "../types/formStateTypes";
 import { SignUpFormSchema } from "../zodSchemas/signUpFormSchema";
 import { LoginFormSchema } from "../zodSchemas/loginFormSchema";
+import { createSession } from "../session";
 
 export async function signUp(
   state: SignUpFormState,
